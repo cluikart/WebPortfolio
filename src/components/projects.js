@@ -2,6 +2,7 @@ import React from "react";
 import posed from "react-pose";
 
 import gitIcon from "../images/github.png";
+import webIcon from "../images/web-icon.png";
 
 const Sidebar = posed.ul({
     open: {
@@ -34,6 +35,25 @@ class Projects extends React.Component {
         return(
             <div className="section projects">
                 <Sidebar className="sidebar" pose={isOpen ? 'open' : 'closed'}>
+                <Item className="project-item" >
+                        
+                        <h3>StickyNotes Web App </h3>
+                        <p>•	A Web app for managing a person's sticky notes. Individuals can make a number of note boards
+                            and populate those boards with customizable sticky notes
+                        </p>
+                        <p>  •	The application used a number of technologies.
+                        </p>
+                        <p>
+                            FrontEnd: Relied on Reactjs, HTML, CSS, AWS S3 & CloudFront.
+                        </p>
+                        <p>
+                            BackEnd: Nodejs Express server, Sequelize ORM, with MySQl database. Implemented
+                            with AWS Elastic Beanstalk & Relational Database Service (RDS).
+                        </p>
+                        <a href="https://github.com/cluikart/StickyNotes"><img src={gitIcon} className="project-item-git grow"/> </a>
+                        <a href="http://d1cvfwbxmx796j.cloudfront.net"><img src={webIcon} className="project-item-git grow"/></a>
+                    
+                </Item>
                     <Item className="project-item" >
                         
                             <h3>Interior Design Web App | Katie Lillback</h3>
@@ -55,12 +75,12 @@ class Projects extends React.Component {
                             <a href="https://github.com/cluikart/BLE_Controller"><img src={gitIcon} className="project-item-git grow"/> </a>
                         
                     </Item>
-                    <Item className="project-item" >
+                    {/* <Item className="project-item" >
                         <div>
                             <h3></h3>
                             <p></p>
                         </div>
-                    </Item>
+                    </Item> */}
                     
                 </Sidebar>    
             </div>    
