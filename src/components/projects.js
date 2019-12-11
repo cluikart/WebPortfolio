@@ -75,6 +75,17 @@ class Projects extends React.Component {
                             <a href="https://github.com/cluikart/BLE_Controller"><img src={gitIcon} className="project-item-git grow"/> </a>
                         
                     </Item>
+
+                    <Item className="project-item" >
+                        
+                            <h3>Pytorch ML </h3>
+                            <p>•	Built a simple Neural Network Using Pytorch.
+                            </p>
+                            <p>  •	The network trained on HIV Drug resistance data from Stanfords HIVdb.
+                            </p>
+                            <a href="https://github.com/cluikart/SeniorThesis"><img src={gitIcon} className="project-item-git grow"/> </a>
+                        
+                    </Item>
                     {/* <Item className="project-item" >
                         <div>
                             <h3></h3>
