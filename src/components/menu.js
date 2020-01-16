@@ -29,21 +29,34 @@ class Menu extends React.Component {
         this.projectRef = React.createRef();
         this.getElemCoord = this.getElemCoord.bind(this);
         this.setHighlight = this.setHighlight.bind(this);
+        this.interval = null;
+        this.ref = this.homeRef;
         this.state = {
             highlightX: 83,
             highlightY: 0,
             highlightW: 0,
             highlightH: 0,
-            ref: null,
+            ref: this.homeRef,
         }
     }
 
     componentDidMount() {
+        
         this.setHighlight(this.homeRef.current);
+
+        this.interval = setInterval(() => {
+           
+            this.setHighlight(this.ref);
+        }, 2000)
     }
 
     componentDidUpdate() {
         // this.setHighlight(this.state.ref);
+
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.interval);
     }
 
     getElemCoord(ref)  {
@@ -52,7 +65,9 @@ class Menu extends React.Component {
     };
 
     setHighlight(ref) {
+        
         this.setState({ref: ref});
+        this.ref = ref;
         const pos = this.getElemCoord(ref);
         this.setState({highlightX: pos.x-2.5, 
                         highlightY: pos.y+5,
