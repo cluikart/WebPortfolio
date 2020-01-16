@@ -5,10 +5,10 @@ import { rgba } from "style-value-types";
 
 const charPoses = {
     draggable: true,
-    exit: {"text-shadow":"1px 1px 1px rgba(117,33,48,0), 0px 0px 0px rgba(0,0,0,0), 0px 0px 0px rgba(255,255,255,0)",},
+    exit: {"text-shadow":"1px 1px 1px rgba(55, 112, 204,0), 0px 0px 0px rgba(0,0,0,0), 0px 0px 0px rgba(255,255,255,0)",},
     enter: {
          
-        "text-shadow": "2px 2px 1px rgba(117,33,48,1), 5px 5px 5px rgba(0,0,0,0.9), -1px -1px 1px rgba(255,255,255,0.3) ",
+        "text-shadow": "2px 2px 1px rgba(55, 112, 204,1), 5px 5px 5px rgba(0,0,0,0.9), -1px -1px 1px rgba(255,255,255,0.3) ",
         delay: ({charIndex}) => charIndex * 50
      }
 } 
